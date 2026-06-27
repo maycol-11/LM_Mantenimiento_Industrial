@@ -16,7 +16,7 @@
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="UY">
 <meta name="geo.placename" content="Uruguay">
-<link rel="canonical" href="https://www.lm-mantenimiento.com.uy/">
+<link rel="canonical" href="https://maycol-11.github.io/LM_Mantenimiento_Industrial/">
 
 <!-- ── Open Graph (WhatsApp / Facebook / LinkedIn) ── -->
 <meta property="og:type" content="website">
@@ -24,14 +24,14 @@
 <meta property="og:site_name" content="LM Mantenimiento Industrial">
 <meta property="og:title" content="LM Mantenimiento Industrial — Soluciones Industriales Integrales">
 <meta property="og:description" content="Fabricación, instalación y mantenimiento para el sector industrial en Uruguay. Técnicos certificados IG2. Visita técnica gratuita.">
-<meta property="og:url" content="https://www.lm-mantenimiento.com.uy/">
-<meta property="og:image" content="https://www.lm-mantenimiento.com.uy/og-image.jpg">
+<meta property="og:url" content="https://maycol-11.github.io/LM_Mantenimiento_Industrial/">
+<meta property="og:image" content="https://maycol-11.github.io/LM_Mantenimiento_Industrial/og-image.png">
 
 <!-- ── Twitter Card ── -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="LM Mantenimiento Industrial — Soluciones Industriales Integrales">
 <meta name="twitter:description" content="Fabricación, instalación y mantenimiento para el sector industrial en Uruguay. Técnicos certificados IG2.">
-<meta name="twitter:image" content="https://www.lm-mantenimiento.com.uy/og-image.jpg">
+<meta name="twitter:image" content="https://maycol-11.github.io/LM_Mantenimiento_Industrial/og-image.png">
 
 <!-- ── Datos estructurados (Google) ── -->
 <script type="application/ld+json">
@@ -774,6 +774,89 @@ footer b { color:var(--gold); font-weight:400; }
 .to-top:hover { border-color:var(--gold); }
 @media(min-width:1024px){ .to-top { right:28px; bottom:104px; } }
 
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   GALERÍA DE TRABAJOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.gal-grid {
+  display:grid; grid-template-columns:1fr; gap:16px; margin-top:36px;
+}
+@media(min-width:640px)  { .gal-grid { grid-template-columns:repeat(2,1fr); } }
+@media(min-width:1024px) { .gal-grid { grid-template-columns:repeat(3,1fr); gap:20px; } }
+.gal-card {
+  position:relative; overflow:hidden;
+  border:1px solid var(--border); background:var(--panel);
+  aspect-ratio:4/3;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  /* Para usar una foto real, reemplazá el gradiente por:
+     background:url('fotos/tu-foto.jpg') center/cover; */
+  background-image:
+    linear-gradient(160deg, rgba(22,96,199,0.18), rgba(8,17,30,0.0) 55%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0 14px, transparent 14px 28px),
+    linear-gradient(180deg, var(--ink2), var(--panel));
+  transition:transform .25s, border-color .25s;
+}
+.gal-card:hover { transform:translateY(-4px); border-color:var(--gold); }
+.gal-ph {
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:8px; opacity:.5;
+}
+.gal-ph .i { font-size:42px; }
+.gal-ph .t { font-family:'Barlow Condensed',sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--muted); }
+.gal-overlay {
+  position:relative; z-index:2; width:100%;
+  padding:18px 18px 16px;
+  background:linear-gradient(transparent, rgba(8,17,30,0.92));
+}
+.gal-cat {
+  display:inline-block; font-family:'Barlow Condensed',sans-serif;
+  font-size:10px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--ink); background:var(--gold); padding:3px 9px; margin-bottom:8px;
+}
+.gal-title {
+  font-family:'Barlow Condensed',sans-serif; font-weight:600;
+  font-size:17px; letter-spacing:.4px; line-height:1.2;
+}
+.gal-note {
+  margin-top:30px; padding:16px 18px;
+  background:rgba(200,164,74,0.07); border:1px solid rgba(200,164,74,0.22);
+  font-size:13px; color:var(--gold); line-height:1.6;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FORMULARIO DE CONTACTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.form-card {
+  background:var(--panel); border:1px solid var(--border); padding:26px 22px;
+}
+@media(min-width:768px){ .form-card { padding:32px 30px; } }
+.form-card h3 {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:20px; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;
+}
+.form-card .fsub { font-size:13px; color:var(--muted); margin-bottom:22px; line-height:1.6; }
+.f-row { margin-bottom:16px; }
+.f-row label {
+  display:block; font-family:'Barlow Condensed',sans-serif;
+  font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:7px;
+}
+.f-row input, .f-row select, .f-row textarea {
+  width:100%; background:var(--ink2); color:var(--text);
+  border:1px solid var(--border); padding:13px 14px;
+  font-family:'Barlow',sans-serif; font-size:15px;
+  transition:border-color .2s; -webkit-appearance:none; border-radius:0;
+}
+.f-row textarea { resize:vertical; min-height:96px; }
+.f-row input:focus, .f-row select:focus, .f-row textarea:focus { outline:none; border-color:var(--gold); }
+.f-row select { cursor:pointer; }
+.f-two { display:grid; grid-template-columns:1fr; gap:0; }
+@media(min-width:560px){ .f-two { grid-template-columns:1fr 1fr; gap:16px; } }
+.form-submit {
+  width:100%; justify-content:center; margin-top:6px;
+  background:#25D366; color:#fff;
+}
+.form-submit:hover { background:#1fb959; transform:translateY(-2px); }
+.form-hint { font-size:12px; color:var(--muted); text-align:center; margin-top:12px; line-height:1.5; }
+
 </style>
 </head>
 <body>
@@ -791,6 +874,7 @@ footer b { color:var(--gold); font-weight:400; }
   </div>
   <button class="nb on"  onclick="go('home')"     id="n-home">    <span class="ic">🏠</span><span>Inicio</span></button>
   <button class="nb"     onclick="go('services')" id="n-services"> <span class="ic">🔧</span><span>Servicios</span></button>
+  <button class="nb"     onclick="go('gallery')"  id="n-gallery">  <span class="ic">🛠️</span><span>Trabajos</span></button>
   <button class="nb"     onclick="go('why')"      id="n-why">      <span class="ic">⭐</span><span>Nosotros</span></button>
   <button class="nb"     onclick="go('contact')"  id="n-contact">  <span class="ic">📞</span><span>Contacto</span></button>
 </nav>
@@ -1014,6 +1098,50 @@ footer b { color:var(--gold); font-weight:400; }
 </div>
 
 <!-- ╔══════════════════════════════╗
+     ║         GALLERY PAGE        ║
+     ╚══════════════════════════════╝ -->
+<div class="page page-pad" id="p-gallery">
+  <section id="trabajos">
+    <div class="wrap">
+      <div class="eyebrow r">Portafolio</div>
+      <h2 class="sec-title r">Nuestros <em>Trabajos</em></h2>
+      <p class="r" style="font-size:15px;color:var(--muted);max-width:520px;line-height:1.7">
+        Una muestra de las intervenciones que realizamos en planta: gas, cañerías, aislaciones y estructuras.
+      </p>
+      <div class="gal-grid">
+        <div class="gal-card r">
+          <div class="gal-ph"><span class="i">🔥</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Gas Industrial</span><div class="gal-title">Instalación de cañería de gas</div></div>
+        </div>
+        <div class="gal-card r d1">
+          <div class="gal-ph"><span class="i">⚙️</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Cañerías</span><div class="gal-title">Montaje de cañerías de vapor</div></div>
+        </div>
+        <div class="gal-card r d2">
+          <div class="gal-ph"><span class="i">🌡️</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Aislación Térmica</span><div class="gal-title">Aislación térmica de equipos</div></div>
+        </div>
+        <div class="gal-card r">
+          <div class="gal-ph"><span class="i">🔩</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Herrería</span><div class="gal-title">Estructura metálica de soporte</div></div>
+        </div>
+        <div class="gal-card r d1">
+          <div class="gal-ph"><span class="i">🛠️</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Mantenimiento</span><div class="gal-title">Mantenimiento preventivo en planta</div></div>
+        </div>
+        <div class="gal-card r d2">
+          <div class="gal-ph"><span class="i">✓</span><span class="t">Foto del proyecto</span></div>
+          <div class="gal-overlay"><span class="gal-cat">Gas Industrial</span><div class="gal-title">Adecuación a normativa IG2</div></div>
+        </div>
+      </div>
+      <div class="gal-note r">
+        📷 <strong>Sumá tus fotos reales:</strong> envianos las imágenes de tus trabajos y las publicamos aquí. Cada tarjeta está lista para reemplazar el fondo por una foto del proyecto.
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ╔══════════════════════════════╗
      ║          WHY PAGE           ║
      ╚══════════════════════════════╝ -->
 <div class="page page-pad" id="p-why">
@@ -1104,6 +1232,48 @@ footer b { color:var(--gold); font-weight:400; }
         </div>
 
       </div>
+
+      <!-- FORMULARIO -->
+      <div class="form-card r" style="margin-top:48px">
+        <h3>Enviá tu consulta</h3>
+        <p class="fsub">Completá el formulario y se abrirá WhatsApp con tu mensaje listo para enviar a nuestro equipo.</p>
+        <form id="contactForm" onsubmit="return enviarConsulta(event)">
+          <div class="f-two">
+            <div class="f-row">
+              <label for="f-nombre">Nombre *</label>
+              <input type="text" id="f-nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+            <div class="f-row">
+              <label for="f-empresa">Empresa</label>
+              <input type="text" id="f-empresa" name="empresa" placeholder="Nombre de la empresa">
+            </div>
+          </div>
+          <div class="f-two">
+            <div class="f-row">
+              <label for="f-tel">Teléfono</label>
+              <input type="tel" id="f-tel" name="telefono" placeholder="09X XXX XXX">
+            </div>
+            <div class="f-row">
+              <label for="f-servicio">Servicio de interés</label>
+              <select id="f-servicio" name="servicio">
+                <option value="Consulta general">Consulta general</option>
+                <option value="Sistemas de Gas Industrial">Sistemas de Gas Industrial</option>
+                <option value="Fabricación y Montaje de Cañerías">Fabricación y Montaje de Cañerías</option>
+                <option value="Aislaciones Térmicas">Aislaciones Térmicas</option>
+                <option value="Herrería Industrial">Herrería Industrial</option>
+                <option value="Visita técnica">Visita técnica</option>
+              </select>
+            </div>
+          </div>
+          <div class="f-row">
+            <label for="f-mensaje">Mensaje *</label>
+            <textarea id="f-mensaje" name="mensaje" required placeholder="Contanos qué necesitás..."></textarea>
+          </div>
+          <button type="submit" class="btn form-submit">💬 &nbsp;Enviar por WhatsApp</button>
+          <p class="form-hint">Tus datos no se almacenan en este sitio: se envían directo a nuestro WhatsApp.</p>
+        </form>
+      </div>
+
     </div>
   </section>
   <footer>
@@ -1156,6 +1326,22 @@ function svc(i) {
     <div class="svc-items">${s.items.map(x=>`<div class="svc-item">${x}</div>`).join('')}</div>`;
   grid.appendChild(d);
   setTimeout(() => d.scrollIntoView({behavior:'smooth',block:'nearest'}), 100);
+}
+
+/* ── CONTACT FORM → WHATSAPP ── */
+function enviarConsulta(e) {
+  e.preventDefault();
+  const v = id => (document.getElementById(id).value || '').trim();
+  const nombre = v('f-nombre'), empresa = v('f-empresa'),
+        tel = v('f-tel'), servicio = v('f-servicio'), mensaje = v('f-mensaje');
+  let t = `*Nueva consulta — LM Mantenimiento Industrial*\n\n`;
+  t += `*Nombre:* ${nombre}\n`;
+  if (empresa) t += `*Empresa:* ${empresa}\n`;
+  if (tel)     t += `*Teléfono:* ${tel}\n`;
+  t += `*Servicio:* ${servicio}\n`;
+  t += `*Mensaje:* ${mensaje}`;
+  window.open(`https://wa.me/59891528711?text=${encodeURIComponent(t)}`, '_blank');
+  return false;
 }
 
 /* ── PAGE NAVIGATION ── */
